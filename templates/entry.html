@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Entry</title>
+</head>
+<body>
+    <input type="text" placeholder="please enter the contents" name="contents"/>
+    <input type="button" value="Submit" name="submit"/>
+    <ul>
+        {% for content in contents %}
+        {{ content }}
+        {% endfor %}
+    </ul>
+</body>
+</html>

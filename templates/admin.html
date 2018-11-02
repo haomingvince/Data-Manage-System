@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>User management-admin</title>
+</head>
+<body align="center">
+    <h1>User management</h1>
+    {% if message == 'login failed. Please check.' %} {{ message }} Do yo want to <a href="http://127.0.0.1:5000/register">Register</a>? {% endif %}
+    {% if message == 'Successfully updated.' %} {{ message }} {% endif %}
+    <form align="center" method="POST">
+        Username: <input type="text" name="username" placeholder="username"/><br>
+        Original password: <input type="password" name="origpwd" placeholder="original password"/><br>
+        Update to: <input type="password" name="newpwd" placeholder="original password"/><br>
+        <input type="submit" name="submit" />
+        <input type="reset" name="reset" />
+    </form>
+    <a href="http://127.0.0.1:5000">Return to home</a><br>
+</body>
+
+</html>

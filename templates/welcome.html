@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome!</title>
+    <script src="{{ url_for('static',filename='jump.js') }}"></script>
+</head>
+<body align="center">
+    <h1>Welcome to user data management system</h1><br>
+    <h2>Please select your option</h2>
+    <form>
+        Login: <input type="button" name="Login" value="Login" onclick="jump('http://127.0.0.1:5000/login')"/>
+        <a href="http://127.0.0.1:5000/login">Login</a><br>
+        Register: <input type="button" name="Register" value="Register" onclick="jump('http://127.0.0.1:5000/register')"/>
+        <a href="http://127.0.0.1:5000/register">Register</a><br>
+        Update: <input type="button" name="Update" value="Update" onclick="jump('http://127.0.0.1:5000/update')"/>
+        <a href="http://127.0.0.1:5000/update">Update</a><br>
+        Delete: <input type="button" name="Delete" value="Delete" onclick="jump('http://127.0.0.1:5000/delete')"/>
+        <a href="http://127.0.0.1:5000/delete">Delete</a><br>
+    </form>
+</body>
+</html>

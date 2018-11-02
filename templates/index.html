@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>User management</title>
+</head>
+<body align="center">
+    <h1>User management</h1>
+    {% if message == 'login failed. Please check.' %} {{ message }} Do yo want to <a href="http://127.0.0.1:5000/register">Register</a>? {% endif %}
+    {% if message == 'register successfully. Please re-login.' %} {{ message }} <a href="http://127.0.0.1:5000/login">Login</a> {% endif %}
+    {% if message == 'user already exist!' %} {{ message }} {% endif %}
+    {% if message == 'Successfully deleted.' %} {{ message }} {% endif %}
+    <form align="center" method="POST">
+        Username: {{ myform.username }}<br>
+        Password: {{ myform.password }}<br>
+        <input type="submit" name="submit" />
+        <input type="reset" name="reset" />
+    </form>
+    <a href="http://127.0.0.1:5000">Return to home</a><br>
+</body>
+</html>
